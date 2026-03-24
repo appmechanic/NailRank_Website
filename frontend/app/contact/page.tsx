@@ -49,18 +49,18 @@ export default function ContactPage() {
                 desc: 'Drop us a message anytime.',
                 value: 'info@nailranks.com',
               },
-              {
-                icon: 'ri-instagram-line',
-                title: 'Instagram',
-                desc: 'Follow us for updates & inspiration.',
-                value: '@nailranks',
-              },
-              {
-                icon: 'ri-tiktok-line',
-                title: 'TikTok',
-                desc: 'Watch our latest nail art content.',
-                value: '@nailranks',
-              },
+              // {
+              //   icon: 'ri-instagram-line',
+              //   title: 'Instagram',
+              //   desc: 'Follow us for updates & inspiration.',
+              //   value: '@nailranks',
+              // },
+              // {
+              //   icon: 'ri-tiktok-line',
+              //   title: 'TikTok',
+              //   desc: 'Watch our latest nail art content.',
+              //   value: '@nailranks',
+              // },
               {
                 icon: 'ri-time-line',
                 title: 'Response Time',

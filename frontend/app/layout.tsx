@@ -20,8 +20,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "NailRanks – Find the Best Nail Artists",
-  description: "The first global ranking platform for nail artists — powered by public votes.",
+  title: "NailRanks – The Global Ranking for Nail Artists",
+  description: "NailRanks is now live on the App Store. Discover the world's top nail artists, ranked by real people. Android coming soon.",
 };
 
 export default function RootLayout({

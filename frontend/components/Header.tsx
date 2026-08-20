@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import BetaModal from './BetaModal';
 import Image from 'next/image';
+import WaitlistModal from './WaitlistModal';
+import AppStoreButton from './AppStoreButton';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -14,14 +15,14 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const [androidOpen, setAndroidOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0d0514]/85 backdrop-blur-md border-b border-[#F0C4B7]/10">
-        <div className="flex items-center justify-between px-4 md:px-8 py-4">
+        <div className="flex items-center justify-between px-4 md:px-8 py-3">
           <Link href="/" onClick={() => setMenuOpen(false)}>
             <Image
               src="https://static.readdy.ai/image/d62f11b01068b1ff4f20caf5771ddf21/80c3779816c9e51059be9ad9837e9da9.png"
@@ -44,21 +45,17 @@ export default function Header() {
               </Link>
             ))}
             <button
-              onClick={() => setOpen(true)}
-              className="whitespace-nowrap bg-[#F0C4B7] text-[#1a0820] px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#e8b5a6] transition-colors cursor-pointer"
+              onClick={() => setAndroidOpen(true)}
+              className="whitespace-nowrap text-white/70 hover:text-[#F0C4B7] text-sm border border-[#F0C4B7]/25 hover:border-[#F0C4B7]/50 px-4 py-2 rounded-full transition-colors cursor-pointer flex items-center gap-1.5"
             >
-              Join Our Beta App
+              <i className="ri-android-line text-[#F0C4B7]"></i> Android Waitlist
             </button>
+            <AppStoreButton size="sm" />
           </div>
 
           {/* Mobile Toggle */}
-          <div className="flex lg:hidden items-center gap-3">
-            <button
-              onClick={() => setOpen(true)}
-              className="whitespace-nowrap bg-[#F0C4B7] text-[#1a0820] px-3 py-1.5 rounded-full text-xs font-semibold cursor-pointer hidden sm:block"
-            >
-              Join Beta
-            </button>
+          <div className="flex lg:hidden items-center gap-2">
+            <AppStoreButton size="sm" className="hidden sm:inline-flex" />
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="w-9 h-9 flex items-center justify-center text-white/80 cursor-pointer"
@@ -81,16 +78,19 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <button
-              onClick={() => { setOpen(true); setMenuOpen(false); }}
-              className="whitespace-nowrap mt-2 bg-[#F0C4B7] text-[#1a0820] px-5 py-2.5 rounded-full text-sm font-semibold cursor-pointer w-full"
-            >
-              Join Our Beta App
-            </button>
+            <div className="mt-3 flex flex-col gap-2">
+              <AppStoreButton size="md" className="w-full justify-center sm:hidden" />
+              <button
+                onClick={() => { setAndroidOpen(true); setMenuOpen(false); }}
+                className="whitespace-nowrap w-full bg-white/5 border border-[#F0C4B7]/25 text-white px-5 py-2.5 rounded-xl text-sm font-medium cursor-pointer flex items-center justify-center gap-2"
+              >
+                <i className="ri-android-line text-[#F0C4B7]"></i> Join Android Waitlist
+              </button>
+            </div>
           </div>
         )}
       </nav>
-      <BetaModal open={open} onClose={() => setOpen(false)} />
+      <WaitlistModal open={androidOpen} onClose={() => setAndroidOpen(false)} mode="android" />
     </>
   );
 }

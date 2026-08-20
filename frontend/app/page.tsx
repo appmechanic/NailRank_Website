@@ -2,28 +2,35 @@
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import BetaModal from '../components/BetaModal';
+import WaitlistModal from '../components/WaitlistModal';
 import HeroSection from './HeroSection';
-import CountdownSection from './CountdownSection';
+import HowRankingsWork from './HowRankingsWork';
 import FeaturesSection from './FeaturesSection';
-import FounderSection from './FounderSection';
 import WhoIsForSection from './WhoIsForSection';
+import FounderSection from './FounderSection';
 import StatsSection from './StatsSection';
+import DownloadSection from './DownloadSection';
 
 export default function Home() {
-  const [betaOpen, setBetaOpen] = useState(false);
+  const [androidOpen, setAndroidOpen] = useState(false);
+  const [artistOpen, setArtistOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#0d0514]">
       <Header />
-      <HeroSection onBetaClick={() => setBetaOpen(true)} />
-      <CountdownSection />
-      <FeaturesSection />
+      <HeroSection
+        onAndroidClick={() => setAndroidOpen(true)}
+        onArtistClick={() => setArtistOpen(true)}
+      />
+      <HowRankingsWork />
       <FounderSection />
+      <FeaturesSection />
       <WhoIsForSection />
       <StatsSection />
+      <DownloadSection />
       <Footer />
-      <BetaModal open={betaOpen} onClose={() => setBetaOpen(false)} />
+      <WaitlistModal open={androidOpen} onClose={() => setAndroidOpen(false)} mode="android" />
+      <WaitlistModal open={artistOpen} onClose={() => setArtistOpen(false)} mode="founding_artist" />
     </div>
   );
 }

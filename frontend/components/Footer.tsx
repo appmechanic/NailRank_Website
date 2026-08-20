@@ -26,9 +26,10 @@ export default function Footer() {
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">The first global ranking platform for nail artists — powered by public votes.</p>
           </div>
           <div>
-            <h4 className="text-[#F0C4B7] text-sm font-semibold mb-4 uppercase tracking-wider">Get In Touch</h4>
-            <p className="text-white/50 text-sm mb-1">info@nailranks.com</p>
-            <p className="text-white/50 text-sm">Ready to Join? Wait for the Beta!</p>
+            <h4 className="text-[#F0C4B7] text-sm font-semibold mb-4 uppercase tracking-wider">Get The App</h4>
+            <p className="text-white/60 text-sm mb-1">Available now on the App Store.</p>
+            <p className="text-white/60 text-sm mb-3">Android coming soon — join the waitlist.</p>
+            <p className="text-white/50 text-sm">info@nailranks.com</p>
           </div>
         </div>
         <div className="border-t border-[#F0C4B7]/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">

@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
-// TODO: replace with the real App Store URL once the listing is live.
-export const APP_STORE_URL = 'https://apps.apple.com/app/nailranks';
+export const APP_STORE_URL = 'https://apps.apple.com/za/app/nailranks/id6761611217';
 
 interface AppStoreButtonProps {
   size?: 'sm' | 'md' | 'lg';

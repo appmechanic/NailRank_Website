@@ -13,7 +13,15 @@ export default function OurStory() {
         </div>
         <div className="relative">
           <div className="absolute -inset-3 rounded-3xl blur-2xl opacity-20" style={{ background: 'radial-gradient(circle, #F0C4B7 0%, transparent 70%)' }}></div>
-          <img src="https://readdy.ai/api/search-image?query=nail%20artist%20creating%20beautiful%20detailed%20nail%20art%20design%20in%20modern%20luxury%20salon%20studio%2C%20overhead%20view%2C%20dark%20aesthetic%20background%2C%20professional%20photography%2C%20warm%20golden%20light%2C%20colorful%20gel%20nail%20polishes%20on%20table%2C%20artistic%20creative%20process%2C%20beauty%20industry&width=520&height=420&seq=ourstory001&orientation=landscape" alt="Our Story" className="relative rounded-2xl w-full object-cover object-top border border-[#F0C4B7]/15" />
+          <div className="relative rounded-2xl w-full h-64 md:h-80 border border-[#F0C4B7]/15 overflow-hidden">
+            <img
+              src="/hero-nail-art.jpg"
+              alt="A nail artist applying gel polish in a salon"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: '58% 42%' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0d0514]/60 via-transparent to-transparent"></div>
+          </div>
         </div>
       </div>
     </section>

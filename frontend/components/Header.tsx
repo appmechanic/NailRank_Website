@@ -49,8 +49,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="flex lg:hidden items-center gap-2">
-          <AppStoreButton size="sm" className="hidden sm:inline-flex" />
+        <div className="flex lg:hidden items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="w-9 h-9 flex items-center justify-center text-white/80 cursor-pointer"
@@ -74,8 +73,8 @@ export default function Header() {
             </Link>
           ))}
           <div className="mt-3 flex flex-col gap-2">
-            <AppStoreButton size="md" className="w-full justify-center sm:hidden" />
-            <GooglePlayButton size="md" className="w-full justify-center" />
+            <AppStoreButton size="md" className="w-full justify-start" />
+            <GooglePlayButton size="md" className="w-full justify-start" />
           </div>
         </div>
       )}

@@ -29,7 +29,7 @@ export default function WhoIsForSection() {
         >
           Built for the whole <span className="text-[#F0C4B7]">nail community.</span>
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           {audiences.map((a) => (
             <div
               key={a.label}

@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="sm:text-right">
             <h4 className="text-[#F0C4B7] text-sm font-semibold mb-4 uppercase tracking-wider">Get the app</h4>
             <p className="text-white/60 text-sm mb-1">Free on iOS and Android.</p>
-            <a href="mailto:info@nailranks.com" className="text-white/50 hover:text-[#F0C4B7] text-sm transition-colors">
+            <a href="mailto:info@nailranks.com" className="inline-block py-2 text-white/50 hover:text-[#F0C4B7] text-sm transition-colors">
               info@nailranks.com
             </a>
             <div className="flex gap-3 mt-4 sm:justify-end">
@@ -61,7 +61,7 @@ export default function Footer() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-white/30 hover:text-[#F0C4B7] text-xs transition-colors whitespace-nowrap"
+                className="text-white/30 hover:text-[#F0C4B7] text-xs transition-colors whitespace-nowrap py-2"
               >
                 {l.label}
               </Link>

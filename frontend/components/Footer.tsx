@@ -10,9 +10,9 @@ const footerLinks = [
 ];
 
 const socials = [
-  { icon: 'ri-instagram-line', label: 'Instagram', href: 'https://www.instagram.com/velvet_radiance_' },
-  { icon: 'ri-tiktok-line', label: 'TikTok', href: 'https://www.tiktok.com/@_velvet_radiance' },
-  { icon: 'ri-facebook-circle-line', label: 'Facebook', href: 'https://www.facebook.com/share/19RjZzN8D4/' },
+  { icon: 'ri-instagram-line', label: 'Instagram', href: 'https://www.instagram.com/nail_ranks?igsi=MXJjZzNvZTN1NzRibg%3D%3D' },
+  { icon: 'ri-tiktok-line', label: 'TikTok', href: 'https://www.tiktok.com/@nail_ranks?_r=1&_t=ZS-99Ofc4Xqjcm' },
+  { icon: 'ri-facebook-circle-line', label: 'Facebook', href: 'https://www.facebook.com/share/1UvTPPdqG7/?mibextid=wwXIfr' },
 ];
 
 export default function Footer() {

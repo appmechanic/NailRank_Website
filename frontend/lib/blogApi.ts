@@ -57,9 +57,10 @@ interface SlugsResponse {
 
 const safeFetch = async <T>(url: string, revalidate: number | false = false): Promise<T | null> => {
   try {
-    const res = await fetch(url, {
-      next: revalidate === false ? { revalidate: false } : { revalidate }
-    });
+    const res = await fetch(
+      url,
+      revalidate === false ? { cache: 'no-store' } : { next: { revalidate } }
+    );
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {

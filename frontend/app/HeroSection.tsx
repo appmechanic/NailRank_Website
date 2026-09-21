@@ -23,7 +23,7 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.05] mb-5"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
-            South Africa&apos;s<br />
+            The world&apos;s<br />
             nail artists,<br />
             <span className="text-[#F0C4B7]">ranked.</span>
           </h1>
@@ -45,7 +45,7 @@ export default function HeroSection() {
 
           <StoreButtons size="lg" align="start" className="mb-4" />
 
-          <p className="text-xs text-white/45">Free to download. Available across South Africa.</p>
+          <p className="text-xs text-white/45">Free to download. Available worldwide.</p>
         </div>
 
         <div className="relative">

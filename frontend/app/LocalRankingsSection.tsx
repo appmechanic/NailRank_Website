@@ -1,10 +1,10 @@
 // Sample data — illustrative only, used to render the ranked-list preview.
 const RANKS = [
-  { rank: 1, name: 'Lerato M.', suburb: 'Sea Point, Cape Town', score: 9.4 },
-  { rank: 2, name: 'Chanté V.', suburb: 'Sea Point, Cape Town', score: 9.1 },
-  { rank: 3, name: 'Aisha K.', suburb: 'Sea Point, Cape Town', score: 8.8 },
-  { rank: 4, name: 'Nomsa D.', suburb: 'Sea Point, Cape Town', score: 8.6 },
-  { rank: 5, name: 'Robyn T.', suburb: 'Sea Point, Cape Town', score: 8.3 },
+  { rank: 1, name: 'Amara O.', suburb: 'SoHo, New York', score: 9.4 },
+  { rank: 2, name: 'Chanté V.', suburb: 'SoHo, New York', score: 9.1 },
+  { rank: 3, name: 'Aisha K.', suburb: 'SoHo, New York', score: 8.8 },
+  { rank: 4, name: 'Priya N.', suburb: 'SoHo, New York', score: 8.6 },
+  { rank: 5, name: 'Robyn T.', suburb: 'SoHo, New York', score: 8.3 },
 ];
 
 const MEDALS: Record<number, string> = {
@@ -32,14 +32,14 @@ export default function LocalRankingsSection() {
             Be the best in your suburb, <span className="text-[#F0C4B7]">not lost in the crowd.</span>
           </h2>
           <p className="text-white/65 text-sm md:text-base leading-relaxed mb-5">
-            Rankings narrow from province to city to suburb, so you&apos;re measured against the artists around you — not against the whole country. Whether you&apos;re in Sea Point, Sandton, Umhlanga or Hatfield, there&apos;s a leaderboard you can top.
+            Rankings narrow from region to city to suburb, so you&apos;re measured against the artists around you — not against a whole country. Whether you&apos;re in SoHo, Shoreditch, Bondi or Le Marais, there&apos;s a leaderboard you can top.
           </p>
           <p className="text-[#F0C4B7]/85 text-sm md:text-base leading-relaxed border-l-2 border-[#F0C4B7]/40 pl-4">
             Looking for a nail artist? Filter to your area and see who&apos;s genuinely rated highest.
           </p>
 
           <div className="flex flex-wrap items-center gap-2 mt-8 text-xs">
-            <span className="px-3 py-1.5 rounded-full bg-white/5 border border-[#F0C4B7]/15 text-white/60">Province</span>
+            <span className="px-3 py-1.5 rounded-full bg-white/5 border border-[#F0C4B7]/15 text-white/60">Region</span>
             <i className="ri-arrow-right-s-line text-[#F0C4B7]/50"></i>
             <span className="px-3 py-1.5 rounded-full bg-white/5 border border-[#F0C4B7]/15 text-white/60">City</span>
             <i className="ri-arrow-right-s-line text-[#F0C4B7]/50"></i>
@@ -56,9 +56,9 @@ export default function LocalRankingsSection() {
           <div className="relative bg-[#160b26]/90 border border-[#F0C4B7]/20 rounded-3xl p-5 md:p-7 shadow-2xl shadow-black/40">
             <div className="flex items-center justify-between mb-5">
               <div>
-                <p className="text-white/35 text-[10px] uppercase tracking-widest mb-1">Western Cape › Cape Town</p>
+                <p className="text-white/35 text-[10px] uppercase tracking-widest mb-1">New York › Manhattan</p>
                 <h3 className="text-white font-semibold text-lg" style={{ fontFamily: 'var(--font-playfair)' }}>
-                  Sea Point
+                  SoHo
                 </h3>
               </div>
               <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[#F0C4B7] bg-[#F0C4B7]/12 border border-[#F0C4B7]/25 px-2.5 py-1.5 rounded-full">

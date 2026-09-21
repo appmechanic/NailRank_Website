@@ -30,7 +30,7 @@ export default function Footer() {
               className="object-contain mb-4"
             />
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              South Africa&apos;s rating-based social app for nail artists — every design scored out of 10, ranked down to your suburb.
+              The global rating-based social app for nail artists — every design scored out of 10, ranked down to your suburb.
             </p>
           </div>
           <div className="sm:text-right">

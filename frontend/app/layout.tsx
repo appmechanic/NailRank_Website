@@ -21,8 +21,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "NailRanks – South Africa's Nail Artists, Ranked",
-  description: "Rate nail designs out of 10, follow the artists climbing your local leaderboard, and discover top-rated nail talent in your suburb. Free on iOS and Android.",
+  title: "NailRanks – Nail Artists, Ranked Worldwide",
+  description: "Rate nail designs out of 10, follow the artists climbing your local leaderboard, and discover top-rated nail talent in your suburb. Available worldwide on iOS and Android.",
 };
 
 export default function RootLayout({

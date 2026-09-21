@@ -20,7 +20,7 @@ export default function ForBrandsSection() {
             className="text-3xl md:text-4xl font-bold text-white mb-5 leading-tight"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
-            See your products in the hands of <span className="text-[#F0C4B7]">South Africa&apos;s best.</span>
+            See your products in the hands of <span className="text-[#F0C4B7]">the world&apos;s best.</span>
           </h2>
           <p className="text-white/65 text-sm md:text-base leading-relaxed">
             Brand accounts show you how many artists are working with your range, which artists are winning competitions using it, and where your products place across competition entries. Real usage from real artists — not guesswork.

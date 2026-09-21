@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const APP_STORE_URL = 'https://apps.apple.com/za/app/nailranks/id6761611217';
+export const APP_STORE_URL = 'https://apps.apple.com/app/nailranks/id6761611217';
 
 interface AppStoreButtonProps {
   size?: 'sm' | 'md' | 'lg';

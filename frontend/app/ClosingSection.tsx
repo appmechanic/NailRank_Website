@@ -14,7 +14,7 @@ export default function ClosingSection() {
           Ready to see <span className="text-[#F0C4B7]">where you rank?</span>
         </h2>
         <p className="text-white/70 text-sm md:text-lg mb-10 max-w-lg mx-auto">
-          Join South Africa&apos;s nail art community. Free to download.
+          Join the global nail art community. Free to download.
         </p>
 
         <StoreButtons size="lg" align="center" />

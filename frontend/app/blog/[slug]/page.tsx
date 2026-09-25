@@ -6,6 +6,7 @@ import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import BlogSidebar from './BlogSidebar';
 import ShareRow from './ShareRow';
+import StoreLinkTagger from './StoreLinkTagger';
 import { fetchBlogBySlug, fetchBlogSlugs } from '../../../lib/blogApi';
 
 interface PageProps {
@@ -134,9 +135,11 @@ export default async function BlogPostPage({ params }: PageProps) {
       <section className="max-w-6xl mx-auto px-4 md:px-8 pb-20 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10">
         <article>
           <div
+            id="blog-content"
             className="blog-content prose prose-invert prose-lg max-w-none prose-headings:font-[family-name:var(--font-playfair)] prose-headings:text-white prose-p:text-white/80 prose-a:text-[#F0C4B7] prose-strong:text-white prose-img:rounded-2xl prose-blockquote:border-[#F0C4B7] prose-blockquote:text-white/70"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
+          <StoreLinkTagger containerId="blog-content" />
 
           {blog.tags?.length > 0 && (
             <div className="mt-10 flex flex-wrap items-center gap-2">

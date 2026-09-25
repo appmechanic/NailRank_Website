@@ -1,6 +1,7 @@
-import Link from 'next/link';
+'use client';
 
-export const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.nail.ranks';
+import Link from 'next/link';
+import { playStoreUrl, useInstallSource } from '../lib/installSource';
 
 interface GooglePlayButtonProps {
   size?: 'sm' | 'md' | 'lg';
@@ -15,9 +16,10 @@ const SIZES = {
 
 export default function GooglePlayButton({ size = 'md', className = '' }: GooglePlayButtonProps) {
   const s = SIZES[size];
+  const source = useInstallSource();
   return (
     <Link
-      href={PLAY_STORE_URL}
+      href={playStoreUrl(source)}
       target="_blank"
       rel="noopener"
       className={`inline-flex items-center gap-3 bg-white/5 border border-[#F0C4B7]/30 text-white rounded-xl ${s.pad} hover:bg-white/10 hover:border-[#F0C4B7]/60 transition-all`}

@@ -1,0 +1,15 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "install-source-tracking",
+    "main"
+  ],
+  "parent": {
+    "install-source-tracking": "main",
+    "main": null
+  },
+  "order": [
+    "main",
+    "install-source-tracking"
+  ]
+}

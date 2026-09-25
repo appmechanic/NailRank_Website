@@ -1,6 +1,7 @@
-import Link from 'next/link';
+'use client';
 
-export const APP_STORE_URL = 'https://apps.apple.com/app/nailranks/id6761611217';
+import Link from 'next/link';
+import { appStoreUrl, useInstallSource } from '../lib/installSource';
 
 interface AppStoreButtonProps {
   size?: 'sm' | 'md' | 'lg';
@@ -15,9 +16,10 @@ const SIZES = {
 
 export default function AppStoreButton({ size = 'md', className = '' }: AppStoreButtonProps) {
   const s = SIZES[size];
+  const source = useInstallSource();
   return (
     <Link
-      href={APP_STORE_URL}
+      href={appStoreUrl(source)}
       target="_blank"
       rel="noopener"
       className={`inline-flex items-center gap-3 bg-white text-black rounded-xl ${s.pad} shadow-lg hover:bg-white/90 transition-colors ${className}`}

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { playStoreUrl, useInstallSource } from '../lib/installSource';
+import { playStoreAppUrl, playStoreUrl, useInstallSource, useIsAndroid } from '../lib/installSource';
 
 interface GooglePlayButtonProps {
   size?: 'sm' | 'md' | 'lg';
@@ -17,10 +17,11 @@ const SIZES = {
 export default function GooglePlayButton({ size = 'md', className = '' }: GooglePlayButtonProps) {
   const s = SIZES[size];
   const source = useInstallSource();
+  const android = useIsAndroid();
   return (
     <Link
-      href={playStoreUrl(source)}
-      target="_blank"
+      href={android ? playStoreAppUrl(source) : playStoreUrl(source)}
+      target={android ? undefined : '_blank'}
       rel="noopener"
       className={`inline-flex items-center gap-3 bg-white/5 border border-[#F0C4B7]/30 text-white rounded-xl ${s.pad} hover:bg-white/10 hover:border-[#F0C4B7]/60 transition-all`}
     >

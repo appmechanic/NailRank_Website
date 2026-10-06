@@ -19,6 +19,28 @@ export function playStoreUrl(source: string): string {
   return `${PLAY_STORE_BASE}&referrer=${encodeURIComponent(referrer)}`;
 }
 
+// In-app browsers (Instagram, Facebook) open play.google.com as a web page, and
+// the hand-off from there to the Play Store app drops `referrer`. On Android we
+// launch the Play Store app directly with an intent link instead, falling back
+// to the web URL if the Play Store isn't installed.
+export function playStoreAppUrl(source: string): string {
+  const referrer = `utm_source=${source}&utm_medium=social`;
+  const fallback = encodeURIComponent(playStoreUrl(source));
+  return (
+    `intent://details?id=com.nail.ranks&referrer=${encodeURIComponent(referrer)}` +
+    `#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=${fallback};end`
+  );
+}
+
+/** True on Android, after mount (false during the static render). */
+export function useIsAndroid(): boolean {
+  const [android, setAndroid] = useState(false);
+  useEffect(() => {
+    setAndroid(/android/i.test(navigator.userAgent));
+  }, []);
+  return android;
+}
+
 export function appStoreUrl(source: string): string {
   return `${APP_STORE_BASE}?pt=${APPLE_PROVIDER_ID}&ct=${source}&mt=8`;
 }
